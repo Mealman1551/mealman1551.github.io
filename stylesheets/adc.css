@@ -352,17 +352,17 @@ body {
 	border-bottom-left-radius: 5px;
 	align-items: flex-start;
 }
-
 #i7vre {
-	color: black;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px;
-	border-bottom-left-radius: 5px;
-	max-width: 100%;
-	width: 290px;
-	height: 196px;
+    color: black;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    max-width: 100%;
+    width: 500px; /* Verhoog de breedte */
+    height: auto; /* Laat de hoogte automatisch schalen */
 }
+
 
 #i83cp {
 	font-size: 2.5rem;
