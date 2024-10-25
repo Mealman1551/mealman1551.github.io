@@ -285,22 +285,6 @@ body {
 	padding-right: 0px;
 }
 
-#ihj23 {
-	padding: 10px;
-	padding-left: 20px;
-	padding-right: 20px;
-	text-transform: uppercase;
-	font-family: Arial, Helvetica, sans-serif;
-	letter-spacing: 3px;
-	background-color: black;
-	color: white;
-	display: inline-block;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
-	border-bottom-right-radius: 3px;
-	border-bottom-left-radius: 3px;
-}
-
 #i07yy {
 	display: flex;
 	flex-direction: column;
@@ -316,6 +300,8 @@ body {
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px;
 	max-width: 100%;
+	width: 509px;
+	height: 117px;
 }
 
 #i297f {
@@ -336,73 +322,6 @@ body {
 	padding-bottom: 80px;
 	padding-left: 20px;
 	padding-right: 20px;
-	display: none;
-}
-
-#in9ef {
-	font-size: 1.5rem;
-}
-
-#i8isa {
-	padding: 10px;
-	max-width: 750px;
-	padding-left: 0px;
-	padding-right: 0px;
-	text-align: center;
-}
-
-#izue1 {
-	padding: 10px;
-	padding-left: 20px;
-	padding-right: 20px;
-	text-transform: uppercase;
-	font-family: Arial, Helvetica, sans-serif;
-	letter-spacing: 3px;
-	background-color: black;
-	color: white;
-	display: inline-block;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
-	border-bottom-right-radius: 3px;
-	border-bottom-left-radius: 3px;
-}
-
-#i6l3t {
-	color: black;
-	border-top-left-radius: 100%;
-	border-top-right-radius: 100%;
-	border-bottom-right-radius: 100%;
-	border-bottom-left-radius: 100%;
-	max-width: 100%;
-}
-
-#i8w4i {
-	max-width: 1200px;
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-}
-
-#ioyxg {
-	justify-content: center;
-	padding-top: 80px;
-	padding-bottom: 80px;
-	padding-left: 20px;
-	padding-right: 20px;
-	display: none;
-}
-
-#iiacm {
-	font-size: 2.5rem;
-	margin-bottom: 10px;
-	text-align: center;
-}
-
-#ixzh1 {
-	width: 100%;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-	gap: 50px;
 }
 
 .gjs-grid-column.feature-item {
@@ -417,52 +336,96 @@ body {
 	min-width: 30%;
 }
 
-#iinc1f {
+.gjs-grid-column.testimonial-item {
+	padding-top: 15px;
+	padding-right: 15px;
+	padding-bottom: 15px;
+	padding-left: 15px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	min-width: 45%;
+	background-color: rgba(247, 246, 246, 1);
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	align-items: flex-start;
+}
+
+#i7vre {
 	color: black;
-	border-top-left-radius: 100%;
-	border-top-right-radius: 100%;
-	border-bottom-right-radius: 100%;
-	border-bottom-left-radius: 100%;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
 	max-width: 100%;
+	width: 509px;
+	height: 344px;
 }
 
-#istmw2 {
-	font-size: 1.5rem;
+#i83cp {
+	font-size: 2.5rem;
 }
 
-#ijfv13 {
+#ivhbr {
 	padding: 10px;
 	max-width: 750px;
-	padding-left: 0px;
+	margin-bottom: 25px;
+	padding-left: 10px;
 	padding-right: 0px;
-	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
 }
 
-#igsybu {
-	padding: 10px;
+#iui6n {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: center;
+	text-align: right;
+}
+
+#iqllk {
+	gap: 100px;
+	justify-content: space-between;
+}
+
+#ia838 {
+	max-width: 1200px;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+
+#id2wk {
+	justify-content: center;
+	padding-top: 80px;
+	padding-bottom: 80px;
 	padding-left: 20px;
 	padding-right: 20px;
-	text-transform: uppercase;
-	font-family: Arial, Helvetica, sans-serif;
-	letter-spacing: 3px;
-	background-color: black;
-	color: white;
-	display: inline-block;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
-	border-bottom-right-radius: 3px;
-	border-bottom-left-radius: 3px;
 }
 
-#imzjjg {
-	color: black;
-	border-top-left-radius: 100%;
-	border-top-right-radius: 100%;
-	border-bottom-right-radius: 100%;
-	border-bottom-left-radius: 100%;
-	max-width: 100%;
+#iwlbl {
+	padding: 10px;
+	position: static;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	display: flex;
+	justify-content: space-around;
 }
 
-#io2e0a {
-	font-size: 1.5rem;
+@media (max-width:992px) {
+	.gjs-grid-row {
+		flex-direction: column;
+	}
 }
