@@ -360,8 +360,8 @@ body {
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px;
 	max-width: 100%;
-	width: 509px;
-	height: 344px;
+	width: 300px;
+	height: auto;
 }
 
 #i83cp {
