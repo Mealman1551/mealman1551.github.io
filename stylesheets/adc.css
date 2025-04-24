@@ -3,43 +3,41 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: #ffffff;
-  }
+}
   
-  h1, h2, h6 {
+h1, h2, h6 {
 	text-align: center;
 	color: #333;
-  }
+}
   
-  .container {
+.container {
 	width: 80%;
 	margin: auto;
 	overflow: hidden;
 	padding: 20px;
 	background: #ffffff;
 	border-radius: 8px;
-	box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
+}
   
-  img {
+img {
 	max-width: 100%;
 	height: auto;
 	display: block;
 	margin: 0 auto;
-  }
+}
   
-  a {
+a {
 	color: #007bff;
 	text-decoration: none;
-  }
+}
   
-  a:hover {
+a:hover {
 	text-decoration: underline;
-  }
+}
   
-  footer {
+footer {
 	text-align: center;
 	padding: 10px;
 	background: #ffffff;
 	color: white;
-  }
-  
+}
