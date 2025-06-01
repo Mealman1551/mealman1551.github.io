@@ -1,12 +1,12 @@
         body {
             background-color: #1e1e2e;
-            color: #c6a0f6;
-            font-family: "Cascadia Code", "Fira Code", monospace;
+            color: #cba6f7;
+            font-family: Consolas, monospace;
             text-align: center;
             padding: 20px;
         }
         a {
-            color: #a6da95;
+            color: #a6e3a1;
             text-decoration: none;
         }
         a:hover {
