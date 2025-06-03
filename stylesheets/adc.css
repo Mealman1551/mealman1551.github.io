@@ -5,7 +5,7 @@ body {
 	background-color: #ffffff;
 }
   
-h1, h2, h6 {
+h1, h2, h3, h4, h5, h6 {
 	text-align: center;
 	color: #333;
 }
@@ -18,7 +18,7 @@ img {
 }
   
 a {
-	color: #007bff;
+	color: #7e0dff;
 	text-decoration: none;
 }
   
