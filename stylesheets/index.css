@@ -12,3 +12,14 @@
         a:hover {
             text-decoration: underline;
         }
+
+        .intro {
+            background-color: #1e1e2e;
+            color: #cba6f7;
+            padding: 24px 32px;
+            border-radius: 12px;
+            margin: 32px auto;
+            max-width: 600px;
+            font-size: 1.2em;
+            box-shadow: 0 2px 12px rgba(30,30,46,0.2);
+        }
