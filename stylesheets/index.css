@@ -5,10 +5,12 @@
             text-align: left;
             padding: 20px;
         }
+
         a {
             color: #a6e3a1;
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
@@ -18,12 +20,14 @@
             margin: 0 auto;
             max-width: 700px;
         }
+
         .intro ul {
             display: inline-block;
             text-align: left;
             margin: 0 auto;
             padding-left: 20px;
         }
+
         .intro p {
             text-align: left;
         }

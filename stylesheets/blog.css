@@ -7,6 +7,7 @@
             --ctp-border: #45475a;
             --ctp-meta: #b4befe;
         }
+
         body {
             font-family: "Cascadia Code", "Fira Code", monospace;
             background: var(--ctp-bg);
@@ -14,42 +15,50 @@
             padding: 0;
             color: var(--ctp-text);
         }
+
         .container {
             max-width: 800px;
             margin: 40px auto;
             background: var(--ctp-surface);
             padding: 24px;
             border-radius: 12px;
-            box-shadow: 0 2px 16px rgba(30,30,46,0.15);
+            box-shadow: 0 2px 16px rgba(30, 30, 46, 0.15);
             border: 1px solid var(--ctp-border);
         }
+
         h1 {
             text-align: center;
             color: var(--ctp-accent);
         }
+
         .blog-post {
             margin-bottom: 40px;
             border-bottom: 1px solid var(--ctp-border);
             padding-bottom: 24px;
         }
+
         .blog-post:last-child {
             border-bottom: none;
         }
+
         .blog-title {
             font-size: 2em;
             margin-bottom: 8px;
             color: var(--ctp-accent);
         }
+
         .blog-meta {
             color: var(--ctp-meta);
             font-size: 0.95em;
             margin-bottom: 16px;
         }
+
         .blog-content {
             font-size: 1.1em;
             line-height: 1.7;
             color: var(--ctp-subtext);
         }
+
         code {
             background: #181825;
             color: var(--ctp-accent);
@@ -57,6 +66,7 @@
             border-radius: 4px;
             font-size: 0.95em;
         }
+
         b {
             color: var(--ctp-accent);
         }

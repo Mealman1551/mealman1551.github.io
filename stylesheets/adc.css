@@ -4,28 +4,33 @@ body {
 	padding: 0;
 	background-color: #ffffff;
 }
-  
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	text-align: center;
 	color: #333;
 }
-  
+
 img {
 	max-width: 100%;
 	height: auto;
 	display: block;
 	margin: 0 auto;
 }
-  
+
 a {
 	color: #7e0dff;
 	text-decoration: none;
 }
-  
+
 a:hover {
 	text-decoration: underline;
 }
-  
+
 footer {
 	text-align: center;
 	padding: 10px;
