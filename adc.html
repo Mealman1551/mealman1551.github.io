@@ -1,74 +1,91 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ADC - Archived Data Codec</title>
-  <link rel="stylesheet" href="stylesheets/adc.css">
-  <link rel="icon" href="https://raw.githubusercontent.com/Mealman1551/mealman1551.github.io/refs/heads/main/img/favicon.ico" type="image/x-icon">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ADC Archiver page</title>
+        <link rel="stylesheet" href="stylesheets/adc.css">
+        <link rel="icon"
+            href="https://raw.githubusercontent.com/Mealman1551/mealman1551.github.io/refs/heads/main/img/favicon.ico"
+            type="image/x-icon">
+    </head>
+    <body>
+        <header>
+            <br>
+            <a href="https://github.com/Mealman1551/ADC-Archiver">
+                <img
+                    src="https://raw.githubusercontent.com/Mealman1551/ADC/refs/heads/main/img/png/ADC(ArchivedDataCodec).png"
+                    width="100" alt="ADC logo">
+            </a>
+        </header>
 
-</head>
-<body>
-  <header>
-    <br>
-    <a href="https://github.com/Mealman1551/ADC">
-      <img src="https://raw.githubusercontent.com/Mealman1551/mealman1551.github.io/6e71c4b39df531fdd72d53c06ab95d150c564de6/img/ADC(ArchivedDataCodec).png" width="100" alt="ADC Logo">
-    </a>
-  </header>
+        <h1>What is ADC Archiver?</h1>
 
-    <h1>ADC - ArchivedDataCodec</h1>
-    <p>
-      ADC (ArchivedDataCodec) is an open-source file extension and archiving/compression tool that uses Zlib for efficient compression and decompression of various file types. With a simple command-line interface, ADC supports both Windows and Linux, making it easy for users to archive and extract files.
-    </p>
-    <p>
-      ADC Archiver uses an 8-byte header to identify and manage its archive format. This allows for efficient storage and retrieval of data, making it suitable for both personal and professional use.
-    </p>
-    <a href="https://github.com/Mealman1551/ADC/releases/latest" target="_blank">ADC1.3.0 for Windows 8 or higher download</a>
-    <p>Don't like the setup, won't the setup run or want a portable version? You can compile from source.</p>
-    <a href="https://github.com/Mealman1551/ADC-compile-from-scratch" target="_blank">Compile ADC from scratch</a>
+        <p>ADC Archiver or just ADC is a utility for archiving and managing data
+            efficiently using Zlib (Python).</p>
+        <p>It is designed to be cross-platform, working seamlessly on both
+            Windows and Linux systems.</p>
+        <p>ADC uses a simple command-line interface, making it easy to use for
+            both beginners and advanced users.</p>
+        <p>ADC supports a wide range of file types, allowing users to archive
+            and compress various data formats.</p>
+        <p>ADC uses an 8-byte header to identify and manage its archive format,
+            ensuring efficient storage and retrieval of data.</p>
+        <p>ADC is open-source, allowing users to contribute to its development
+            and improvement.</p>
 
-    <h2>ADC for Linux</h2>
-    <p>ADC Archiver for Linux. The way it works is via terminal.</p>
-    <a href="https://github.com/Mealman1551/ADC/wiki/Linux-usage" target="_blank">Get ADC 1.3.0 for Linux</a>
-    <img src="https://raw.githubusercontent.com/Mealman1551/mealman1551.github.io/refs/heads/main/img/Linux.png" width="500" alt="ADC for Linux">
+        <h2>Download ADC</h2>
 
-    <h2>ADC for Every Archive</h2>
-    <p>ADC Archiver can compress and archive any file, therefore it's really suitable for sorting and managing files and archives.</p>
-    <img src="https://raw.githubusercontent.com/Mealman1551/mealman1551.github.io/refs/heads/main/img/Schermafbeelding%202024-10-25%20202149.png" alt="ADC for Every Archive">
+        <p>For Windows users, you can download the latest version of ADC from
+            the following link:</p>
+        <a href="https://github.com/Mealman1551/ADC/releases/latest">Download
+            ADC for Windows</a>
+        <p>If you prefer a portable version or want to compile ADC from source,
+            you can follow the instructions on this repository:</p>
+        <a href="https://github.com/Mealman1551/ADC-compile-from-scratch">ADC
+            Compile from Source</a>
 
-    <h2>Cross-Platform</h2>
-    <p>ADC Archiver is there for every platform, may it be Windows or Linux, ADC is there for you.</p>
-    <img src="https://raw.githubusercontent.com/Mealman1551/mealman1551.github.io/refs/heads/main/img/ADC%20Crossplatform.png" width="750" alt="ADC Cross-Platform">
+        <h2>ADC for Linux</h2>
 
-    <h2>Features</h2>
-    <ul>
-      <li><strong>Great Compression Algorithm</strong>: Utilizes zlib for efficient compression.</li>
-      <li><strong>Cross-Platform</strong>: Compatible with both Windows and Linux.</li>
-      <li><strong>Command-Line Interface</strong>: Simple and intuitive interface.</li>
-      <li><strong>Support</strong>: Supports a wide range of file types.</li>
-    </ul>
+        <p>ADC Archiver for Linux works only on glibc 2.34 and later
+            versions.</p>
+        <a href="https://github.com/Mealman1551/ADC/wiki/Linux-usage">Get ADC
+            for Linux</a>
 
-    <h2>Getting Started</h2>
-    <h3>Prerequisites</h3>
-    <p><strong>Developers:</strong></p>
-    <ul>
-      <li>python 3.12.x</li>
-      <li>zlib library (typically included with Python)</li>
-      <li>tkinter</li>
-      <li>os</li>
-      <li>colorama</li>
-      <li>progress</li>
-      <li>progress.bar</li>
-    </ul>
-    <p><strong>Users:</strong></p>
-    <ul>
-      <li>Windows 8 or higher</li>
-      <li>A Linux distro with at least glibc 2.34</li>
-    </ul>
-  </main>
+        <h3>Which dependencies do developers need?</h3>
 
-  <footer>
-    <h6>&copy; 2025 Mealman1551</h6>
-  </footer>
-</body>
+        <ul>
+            <li>Python 3.11.x or 3.12.x</li>
+            <li>Zlib library (typically included with Python)</li>
+            <li>Tkinter</li>
+            <li>OS</li>
+            <li>Colorama</li>
+            <li>Progress</li>
+            <li>progress.bar</li>
+        </ul>
+
+        <h3>Cross-Platform</h3>
+        <img
+            src="https://raw.githubusercontent.com/Mealman1551/mealman1551.github.io/refs/heads/main/img/ADC%20Crossplatform.png"
+            alt="Crossplatform">
+        <p>ADC Archiver is designed to work on both Windows and Linux, making it
+            a versatile tool for users across different platforms.</p>
+
+        <h3>Linux</h3>
+        <img
+            src="https://raw.githubusercontent.com/Mealman1551/mealman1551.github.io/refs/heads/main/img/Linux.png"
+            alt="ADC for Linux">
+        <p>ADC Archiver runs natively on Linux, providing a command-line
+            interface
+            for efficient archiving and compression.</p>
+
+        <h3>Archive everything really easy</h3>
+        <img
+            src="https://raw.githubusercontent.com/Mealman1551/mealman1551.github.io/refs/heads/main/img/Schermafbeelding%202024-10-25%20202149.png"
+            alt="archives">
+        <p>ADC Archiver allows you to compress and archive any file type, making
+            it suitable for organizing and managing files and archives.</p>
+    </body>
+    <footer>
+        <p>&copy; 2025 Mealman1551</p>
+    </footer>
 </html>
