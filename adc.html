@@ -108,109 +108,123 @@ img {
         introduced on 26-08-2025)</li>
     </ul>
     <br>
-    <h2>Downloads</h2>
-    <h3>Windows</h3>
+    <h1>Downloads</h1>
+    <h2>Windows</h2>
     <p>For Windows, you can download the setup file and run it to install ADC
       Archiver. The setup will create a shortcut in your Start Menu for easy
       access. ADC is compatible with Windows 8 and higher.</p>
     <a
       href="https://github.com/Mealman1551/ADC/releases/download/v1.3.0/ADC_1.3.0_setup.exe"
-      target="_blank">Windows</a>
+      target="_blank">Windows download</a>
     <p>SHA256:
       <code>d954ef241bac169ffe8d1dc08ff98f0b02e0c4265f20585de10e8060ae5ec73b</code></p>
 
     <br>
 
-    <h3>Linux</h3>
-    <p>For Linux, you can download the binary tarball and extract it to a
-      directory of your choice. Make sure to give the binary executable
-      permissions using the command <code>chmod +x adc.bin</code> before running
-      it.
-      <a
-        href="https://github.com/Mealman1551/ADC/releases/download/v1.3.0/bin.tar.xz"
-        target="_blank">Linux</a>
-      <p>SHA256:
-        <code>d7303f9f11c58864de474941a6d747136ae4b9bba12b5689b4c22a4041f7d648</code></p>
-      <p>for more info about how to run on Linux see this: <a
-          href="https://github.com/Mealman1551/ADC/wiki/Linux-usage"
-          target="_blank">Documentation</a></p>
-      <br>
-      <h2>Compile/build from source code</h2>
-      <p>Don't like the setup, won't the setup run or want a portable version?
-        You can compile ADC Archiver from source. Available for Windows and
-        Linux.</p>
-      <a href="https://github.com/Mealman1551/ADC-compile-from-scratch"
-        target="_blank">Compile ADC from source</a>
+    <h2>Linux</h2>
+    <p>For Linux, you can download the tar.xz file and execute
+      <code>install.sh</code> to install ADC Archiver.
+      The install script will set up ADC and after installation, you can run ADC
+      from the terminal using the command: <br> <br><code>adc</code><br> <br>
+      ADC is compatible with Linux distributions that have glibc 2.31 or
+      higher.</p>
 
-      <h3>ADC Canary: The Latest Live Development Version</h3>
-      <p>ADC Canary is the active development branch of the project, focused on
-        collaboration and rapid iteration.
-        It receives daily updates and is not intended for general use, but for
-        developers who want to contribute.
-        You can fork the Canary repository, make changes ranging from minor
-        documentation edits to new features and submit a pull request.
-        Once you've made 25 valid contributions, you will receive a Personal
-        Access Token (PAT) that allows you to commit and push directly to the
-        Canary branch (with limited permissions).
-        Be sure to read the Code of Conduct in the main ADC repository to help
-        maintain a positive and respectful environment.</p>
+    <p>To remove run <code>remove.sh</code></p>
+    <a
+      href="https://github.com/Mealman1551/ADC/releases/download/v1.3.0/adc.tar.xz"
+      target="_blank">Linux download</a>
+    <p>SHA256:
+      <code>1392a8aa8caf4eb5becd31754ddb01ecd21d1a8d24a3dff45ea323f393e225ce</code></p>
+    <br>
+    <p>There is also a command to install ADC, this command requires
+      <code>xz-utils</code> and <code>wget</code></p>
+    <br>
+    <pre><code>mkdir -p ~/adc-temp && cd ~/adc-temp && wget -O adc.tar.xz "https://gitlab.com/adc-project/tars/-/raw/main/adc.tar.xz?inline=false" && tar -xJf adc.tar.xz && sudo ./install.sh && cd ~ && rm -rf ~/adc-temp</code></pre>
+    <br>
+    <p>To remove ADC, run this command:</p>
+    <pre><code>wget -O- "https://gitlab.com/adc-project/bash/-/raw/main/remove.sh" | bash</code></pre>
+    <br>
 
-      <a href="https://gitlab.com/Mealman1551/adc-canary" target="_blank">ADC
-        Canary on GitLab</a>
+    <p>for more info about how to run on Linux see this: <a
+        href="https://github.com/Mealman1551/ADC/wiki/Linux-usage"
+        target="_blank">Documentation</a></p>
+    <br>
+    <h2>Compile/build from source code</h2>
+    <p>Don't like the setup, won't the setup run or want a portable version?
+      You can compile ADC Archiver from source. Available for Windows and
+      Linux.</p>
+    <a href="https://github.com/Mealman1551/ADC-compile-from-scratch"
+      target="_blank">Compile ADC from source</a>
 
-      <h2>Contributing</h2>
-      <p>We welcome contributions to ADC! Whether you're a developer, designer,
-        or just someone who wants to help:</p>
-      <h3>Steps to Contribute</h3>
-      <ol>
-        <li><strong>Fork the Repository:</strong> Fork the repository to your
-          own
-          GitHub account.</li>
-        <li><strong>Clone the Repository:</strong> Clone your forked repository
-          to
-          your local machine:
-          <pre><code>git clone https://gitlab.com/Mealman1551/adc-canary.git</code></pre>
-        </li>
-        <li><strong>Modify the Code:</strong> Make your changes or fixes.</li>
-        <li><strong>Commit Your Changes:</strong> Commit with a clear message:
-          <pre><code>git commit -m "Your descriptive commit message"</code></pre>
-        </li>
-        <li><strong>Push Your Changes:</strong> Push to your fork:
-          <pre><code>git push origin main</code></pre>
-        </li>
-        <li><strong>Create a Pull Request:</strong> Go to the original
-          repository
-          and create a pull request from your fork. Provide a clear description
-          of
-          your changes and why they are necessary.</li>
-        <li><strong>Review and Feedback:</strong> Project maintainers will
-          review
-          your pull request. Be open to feedback and make changes if
-          requested.</li>
-      </ol>
-      <p><em>Note:</em> Maintainers will review the diff and blame to see what
-        you
-        changed. Only change the lines you need. Changes are manually
-        implemented
-        to avoid merge conflicts due to frequent updates.</p>
+    <h3>ADC Canary: The Latest Live Development Version</h3>
+    <p>ADC Canary is the active development branch of the project, focused on
+      collaboration and rapid iteration.
+      It receives daily updates and is not intended for general use, but for
+      developers who want to contribute.
+      You can fork the Canary repository, make changes ranging from minor
+      documentation edits to new features and submit a pull request.
+      Once you've made 25 valid contributions, you will receive a Personal
+      Access Token (PAT) that allows you to commit and push directly to the
+      Canary branch (with limited permissions).
+      Be sure to read the Code of Conduct in the main ADC repository to help
+      maintain a positive and respectful environment.</p>
 
-      <h3>Code Style Guidelines</h3>
-      <ul>
-        <li>Follow the existing code style and conventions.</li>
-        <li>Use meaningful variable and function names.</li>
-        <li>Write clear and concise commit messages.</li>
-        <li>Document your code with comments where necessary.</li>
-        <li>Run tests to ensure your changes do not break existing
-          functionality.</li>
-      </ul>
+    <a href="https://gitlab.com/Mealman1551/adc-canary" target="_blank">ADC
+      Canary on GitLab</a>
 
-      <h3>Reporting Issues</h3>
-      <p><strong>ADC Canary</strong> does use issues, although you need a GitLab
-        or GitHub account to make a issue as there is no bug report form like
-        the ADC Stable release.</p>
+    <h2>Contributing</h2>
+    <p>We welcome contributions to ADC! Whether you're a developer, designer,
+      or just someone who wants to help:</p>
+    <h3>Steps to Contribute</h3>
+    <ol>
+      <li><strong>Fork the Repository:</strong> Fork the repository to your
+        own
+        GitHub account.</li>
+      <li><strong>Clone the Repository:</strong> Clone your forked repository
+        to
+        your local machine:
+        <pre><code>git clone https://gitlab.com/Mealman1551/adc-canary.git</code></pre>
+      </li>
+      <li><strong>Modify the Code:</strong> Make your changes or fixes.</li>
+      <li><strong>Commit Your Changes:</strong> Commit with a clear message:
+        <pre><code>git commit -m "Your descriptive commit message"</code></pre>
+      </li>
+      <li><strong>Push Your Changes:</strong> Push to your fork:
+        <pre><code>git push origin main</code></pre>
+      </li>
+      <li><strong>Create a Pull Request:</strong> Go to the original
+        repository
+        and create a pull request from your fork. Provide a clear description
+        of
+        your changes and why they are necessary.</li>
+      <li><strong>Review and Feedback:</strong> Project maintainers will
+        review
+        your pull request. Be open to feedback and make changes if
+        requested.</li>
+    </ol>
+    <p><em>Note:</em> Maintainers will review the diff and blame to see what
+      you
+      changed. Only change the lines you need. Changes are manually
+      implemented
+      to avoid merge conflicts due to frequent updates.</p>
 
-      <footer>
-        <h6>&copy; 2025 Mealman1551</h6>
-      </footer>
-    </body>
-  </html>
+    <h3>Code Style Guidelines</h3>
+    <ul>
+      <li>Follow the existing code style and conventions.</li>
+      <li>Use meaningful variable and function names.</li>
+      <li>Write clear and concise commit messages.</li>
+      <li>Document your code with comments where necessary.</li>
+      <li>Run tests to ensure your changes do not break existing
+        functionality.</li>
+    </ul>
+
+    <h3>Reporting Issues</h3>
+    <p><strong>ADC Canary</strong> does use issues, although you need a GitLab
+      or GitHub account to make a issue as there is no bug report form like
+      the ADC Stable release.</p>
+
+    <footer>
+      <h6>&copy; 2025 Mealman1551</h6>
+    </footer>
+  </body>
+</html>
