@@ -1,86 +1,105 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Chromium Updater</title>
-    <h1>The Chromium Updater</h1>
-    <link rel="icon" type="image/x-icon" href="img/chromium.png">
-    <a href="https://github.com/Mealman1551/chromium-latest-Enhanced"><img src="img/chromium site/Chromiumupdaterinstallerlogo.svg" width="200" height="200" alt="Chromium Updater Logo"></a>
-</head>
-<body>
-    <p><a href="https://github.com/Mealman1551/chromium-latest-Enhanced">The Chromium Updater</a> or also known as 'chromium-latest-Enhanced' is a fork of <a href="https://github.com/scheib/chromium-latest-linux">scheib/chromium-latest-linux</a> by <a href="https://github.com/Mealman1551">Mealman1551</a> to make installing and updating Chromium way easier</p>
-    
-    <p>Click on the logo or following link to go to the <a href="https://github.com/Mealman1551/chromium-latest-Enhanced">repository</a></p>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Chromium Updater</title>
+        <h1>The Chromium Updater</h1>
+        <link rel="icon" type="image/x-icon" href="img/chromium.png">
+        <a href="https://github.com/Mealman1551/chromium-latest-Enhanced"><img
+                src="img/chromium site/Chromiumupdaterinstallerlogo.svg"
+                width="200" height="200" alt="Chromium Updater Logo"></a>
+    </head>
+    <body>
+        <p><a href="https://github.com/Mealman1551/chromium-latest-Enhanced">The
+                Chromium Updater</a> or also known as 'chromium-latest-Enhanced'
+            is a fork of <a
+                href="https://github.com/scheib/chromium-latest-linux">scheib/chromium-latest-linux</a>
+            by <a href="https://github.com/Mealman1551">Mealman1551</a> to make
+            installing and updating Chromium way easier</p>
 
-    <h2>Features</h2>
-    <ul>
-        <li>Downloads and installs the latest stable version of Chromium for AMD64/x64 by typing 1 command</li>
-        <li>Lightweight script with minimal dependencies</li>
-        <li>Automatically creates a desktop entry for easy access</li>
-        <li>Supports multiple languages</li>
-    <h2>How does it work</h2>
-    <p>The repo contains these files:
-    
-    chromiumup
-    install-windows.ps1
-    install.sh
-    LICENSE
-    README.md
-    remove.sh
-    uninstall-windows.ps1</p>
+        <p>Click on the logo or following link to go to the <a
+                href="https://github.com/Mealman1551/chromium-latest-Enhanced">repository</a></p>
 
-    <p>What does each file do:
+        <h2>Features</h2>
+        <ul>
+            <li>Downloads and installs the latest stable version of Chromium for
+                AMD64/x64 by typing 1 command</li>
+            <li>Lightweight script with minimal dependencies</li>
+            <li>Automatically creates a desktop entry for easy access</li>
+            <li>Supports multiple languages</li>
+            <h2>How does it work</h2>
+            <p>The repo contains these files:</p>
+            <p>What does each file do?</p>
 
-    chromiumup: the main updater command executable for Linux.
-    install-windows.ps1: the installer script for Windows PowerShell.
-    install.sh: the installer script for Linux.
-    LICENSE: the license file for the project.
-    README.md: the readme file containing information about the project.
-    remove.sh: the uninstaller script for Linux.
-    uninstall-windows.ps1: the uninstaller script for Windows PowerShell.</p>
+            <ul>
+                <li>chromiumup: This file is the main updater for Linux, this is
+                    a simple Bash script that can be invoked as:
+                    <code>chromiumup</code></li>
+                <li>install-windows.ps1: This script is for installation on
+                    Windows, you need to download the script locally on Windows
+                    10 and for Windows 11 and up you can use the irm
+                    command.</li>
+                <li>install.sh: This is the script for installation on
+                    Linux.</li>
+                <li>LICENSE: The license of this project</li>
+                <li>README.md: Documentation for the project</li>
+                <li>remove.sh: This script will remove Chromium and
+                    <code>chromiumup</code> from Linux.</li>
+                <li>uninstall-windows.ps1: This script will remove Chromium and
+                    <code>chromiumup</code> from Windows</li>
+            </ul>
 
-    <h2>Installing, updating and removing Chromium</h2>
+            <h2>Installing, updating and removing Chromium</h2>
 
-    <h3>Linux</h3>
-    <p>To install and update Chromium on Linux, follow these steps:</p>
-    <ol>
-        <li>Open your terminal.</li>
-        <li>Run the following command to download and install the updater script:
-            <pre><code>wget -qO- https://raw.githubusercontent.com/Mealman1551/chromium-latest-Enhanced/refs/heads/master/install.sh | bash</code></pre>
-        </li>
-        <li>Once installed, you can update Chromium at any time by running:
-            <pre><code>chromiumup</code></pre>
-        </li>
-    </ol>
-    <p>To remove Chromium on Linux, follow these steps:</p>
-    <ol>
-        <li>Open your terminal.</li>
-        <li>Run the following command to uninstall Chromium:
-            <pre><code>wget -qO- https://raw.githubusercontent.com/Mealman1551/chromium-latest-Enhanced/refs/heads/master/remove.sh | bash</code></pre>
-        </li>
-    </ol>
+            <h3>Linux</h3>
+            <p>To install and update Chromium on Linux, follow these steps:</p>
+            <ol>
+                <li>Open your terminal.</li>
+                <li>Run the following command to download and install the
+                    updater script:
+                    <pre><code>wget -qO- https://raw.githubusercontent.com/Mealman1551/chromium-latest-Enhanced/refs/heads/master/install.sh | bash</code></pre>
+                </li>
+                <li>Once installed, you can update Chromium at any time by
+                    running:
+                    <pre><code>chromiumup</code></pre>
+                </li>
+            </ol>
+            <p>To remove Chromium on Linux, follow these steps:</p>
+            <ol>
+                <li>Open your terminal.</li>
+                <li>Run the following command to uninstall Chromium:
+                    <pre><code>wget -qO- https://raw.githubusercontent.com/Mealman1551/chromium-latest-Enhanced/refs/heads/master/remove.sh | bash</code></pre>
+                </li>
+            </ol>
 
-    <h3>Windows</h3>
-    <p>To install and update Chromium on Windows, follow these steps:</p>
-    <ol>
-        <li>Open PowerShell as Administrator.</li>
-        <li>Run the following command to download and install the updater script:
-            <pre><code>irm https://raw.githubusercontent.com/Mealman1551/chromium-latest-Enhanced/refs/heads/master/install-windows.ps1 | iex</code></pre>
-        </li>
-        <li>Once installed, you can update Chromium at any time by running:
-            <pre><code>chromiumup</code></pre>
-        </li>
-    </ol>
-    <p>To remove Chromium on Windows, follow these steps:</p>
-    <ol>
-        <li>Open PowerShell as Administrator.</li>
-        <li>Run the following command to uninstall Chromium:
-            <pre><code>irm https://raw.githubusercontent.com/Mealman1551/chromium-latest-Enhanced/refs/heads/master/uninstall-windows.ps1 | iex</code></pre>
-        </li>
-    </ol>
-    <footer>
-    Made with &#128154; by Mealman1551
-    </footer>
-    <h6>&copy; 2025 Mealman1551</h6>
-</body>
-</html>
+            <h3>Windows</h3>
+
+            <h5>For Windows 10 you need to download the script locally and
+                manually. Windows 11 and up work with the irm command.</h5>
+
+            <p>To install and update Chromium on Windows, follow these
+                steps:</p>
+            <ol>
+                <li>Open PowerShell as Administrator.</li>
+                <li>Run the following command to download and install the
+                    updater script:
+                    <pre><code>irm https://raw.githubusercontent.com/Mealman1551/chromium-latest-Enhanced/refs/heads/master/install-windows.ps1 | iex</code></pre>
+                </li>
+                <li>Once installed, you can update Chromium at any time by
+                    running:
+                    <pre><code>chromiumup</code></pre>
+                </li>
+            </ol>
+            <p>To remove Chromium on Windows, follow these steps:</p>
+            <ol>
+                <li>Open PowerShell as Administrator.</li>
+                <li>Run the following command to uninstall Chromium:
+                    <pre><code>irm https://raw.githubusercontent.com/Mealman1551/chromium-latest-Enhanced/refs/heads/master/uninstall-windows.ps1 | iex</code></pre>
+                </li>
+            </ol>
+            <footer>
+                Made with &#128154; by Mealman1551
+            </footer>
+            <h6>&copy; 2025 Mealman1551</h6>
+        </body>
+    </html>
