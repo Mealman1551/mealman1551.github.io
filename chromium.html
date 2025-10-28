@@ -2,8 +2,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>The Chromium Updater</title>
-        <h1>The Chromium Updater</h1>
+        <title>ChromiumUp</title>
+        <h1>ChromiumUp</h1>
         <link rel="icon" type="image/x-icon" href="img/chromium.png">
         <a href="https://github.com/Mealman1551/chromium-latest-Enhanced"><img
                 src="img/chromium site/Chromiumupdaterinstallerlogo.svg"
@@ -23,17 +23,19 @@
         <h2>Features</h2>
         <ul>
             <li>Downloads and installs the latest stable version of Chromium for
-                AMD64/x64 by typing 1 command</li>
+            <li>AMD64/x64 by typing 1 command</li>
             <li>Lightweight script with minimal dependencies</li>
             <li>Automatically creates a desktop entry for easy access</li>
             <li>Supports multiple languages</li>
+        </ul>
+
             <h2>How does it work</h2>
             <p>The repo contains these files:</p>
             <p>What does each file do?</p>
 
             <ul>
                 <li>chromiumup: This file is the main updater for Linux, this is
-                    a simple Bash script that can be invoked as:
+                    a simple Bash script that can be invoked with:
                     <code>chromiumup</code></li>
                 <li>install-windows.ps1: This script is for installation on
                     Windows, you need to download the script locally on Windows
@@ -47,6 +49,12 @@
                     <code>chromiumup</code> from Linux.</li>
                 <li>uninstall-windows.ps1: This script will remove Chromium and
                     <code>chromiumup</code> from Windows</li>
+            </ul>
+
+            <h2>Notes</h2>
+            <ul>
+                <li>This updater only supports AMD64/x64 architecture</li>
+                <li>This script pulls the "raw" build, so no proprietary codecs, no Widevine and no Google API keys</li>
             </ul>
 
             <h2>Installing, updating and removing Chromium</h2>
@@ -74,8 +82,7 @@
 
             <h3>Windows</h3>
 
-            <h5>For Windows 10 you need to download the script locally and
-                manually. Windows 11 and up work with the irm command.</h5>
+            <h5>For Windows 10 you need to download the script locally/manually. Windows 11 and up work with the irm command.</h5>
 
             <p>To install and update Chromium on Windows, follow these
                 steps:</p>
