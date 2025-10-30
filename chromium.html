@@ -106,9 +106,35 @@
                     <pre><code>irm https://raw.githubusercontent.com/Mealman1551/chromium-latest-Enhanced/refs/heads/master/uninstall-windows.ps1 | iex</code></pre>
                 </li>
             </ol>
+            <div
+                style="border:2px solid red; padding:10px; background-color:#ffe6e6;">
+                <h3>Important Warning for Users</h3>
+                <p>This script installs a <strong>custom Chromium build</strong>
+                    alongside any existing Chromium installation.</p>
+                <ul>
+                    <li>It may <strong>overwrite or conflict</strong> with your
+                        current Chromium profile.</li>
+                    <li>Possible issues include:
+                        <ul>
+                            <li>Chromium failing to start due to a corrupt
+                                profile.</li>
+                            <li>Loss of settings, extensions, or saved passwords
+                                if using the same profile.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>To troubleshoot, launch Chromium with a temporary clean
+                    profile:</p>
+                <pre><code>chromium --user-data-dir=/tmp/chromium-test</code></pre>
+                <p>Or back up your current profile:</p>
+                <pre><code>mv ~/.config/chromium ~/.config/chromium.backup</code></pre>
+                <p>Use this script only if you <strong>intend to test a separate
+                        build</strong> and are willing to back up your
+                    profile.</p>
+            </div>
             <footer>
                 Made with &#128154; by Mealman1551
-<pre><font color="#C01C28"><b>            .,:loool:,.</b></font>
+                <pre><font color="#C01C28"><b>            .,:loool:,.</b></font>
 <font color="#C01C28"><b>        .,coooooooooooooc,.</b></font>
 <font color="#C01C28"><b>     .,lllllllllllllllllllll,.</b></font>
 <font color="#C01C28"><b>    ;ccccccccccccccccccccccccc;</b></font>
@@ -132,17 +158,3 @@
             <h6>&copy; 2025 Mealman1551</h6>
         </body>
     </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
