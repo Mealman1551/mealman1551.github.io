@@ -2,8 +2,8 @@
 
 :root {
     --bg-color: #24273a;
-    --text-color: #cad3f5;
-    --accent-color: #f5a97f;
+    --text-color: #a6da95;
+    --accent-color: #8bd5ca;
     --secondary-color: #ee99a0;
     --highlight-color: #96cdfb;
     --muted-color: #6e738d;
@@ -20,7 +20,6 @@ body {
     transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Keyframes voor box‑elementen (zie buttons) */
 @keyframes pulseGradient {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -34,31 +33,29 @@ h1, h2, h3, h4, h5, h6 {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    color: transparent;
+    display: inline-block;
+    will-change: background-position;
+    transform: translateZ(0);
+    -webkit-font-smoothing: antialiased;
     animation: pulseGradient 5s ease-in-out infinite alternate;
-    display: inline-block; /* Belangrijk! */
 }
 
 a {
     color: var(--accent-color);
     text-decoration: none;
     position: relative;
-    display: inline-block; /* Belangrijk! */
+    display: inline-block;
     background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
     background-size: 200% 200%;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: pulseGradient 4s ease-in-out infinite alternate;
-}
-
-a:hover {
-    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
     color: transparent;
-    background-repeat: no-repeat;
-    background-origin: content-box;
+    will-change: background-position;
+    transform: translateZ(0);
+    -webkit-font-smoothing: antialiased;
+    animation: pulseGradient 4s ease-in-out infinite alternate;
 }
 
 a::after {
@@ -79,7 +76,6 @@ a:hover::after {
     transform-origin: left;
 }
 
-/* Intro blok */
 .intro {
     max-width: 700px;
     margin: 0 auto 40px;
@@ -120,7 +116,6 @@ footer {
     letter-spacing: 0.5px;
 }
 
-/* Code blokken */
 code, pre {
     font-family: 'JetBrains Mono', monospace;
     background: linear-gradient(135deg, rgba(245,169,127,0.05), rgba(150,205,251,0.05));
@@ -131,12 +126,10 @@ code, pre {
     transition: background 0.3s ease;
 }
 
-/* Buttons met gradient animatie – safe omdat geen text‑clip hier */
 button {
     display: inline-block;
     background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
     background-size: 200% 200%;
-    background-repeat: no-repeat;
     color: var(--bg-color);
     border: none;
     padding: 10px 20px;
