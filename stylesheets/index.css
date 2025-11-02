@@ -21,12 +21,25 @@ body {
 }
 
 @keyframes pulseGradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 700;
     background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
     background-size: 200% 200%;
@@ -80,13 +93,14 @@ a:hover::after {
     max-width: 700px;
     margin: 0 auto 40px;
     padding: 20px;
-    background: linear-gradient(135deg, rgba(245,169,127,0.05), rgba(150,205,251,0.05));
+    background: linear-gradient(135deg, rgba(245, 169, 127, 0.05), rgba(150, 205, 251, 0.05));
     border-left: 3px solid var(--accent-color);
     border-radius: 8px;
     transition: background 0.3s ease;
 }
 
-.intro p, .intro ul {
+.intro p,
+.intro ul {
     margin-bottom: 15px;
 }
 
@@ -116,9 +130,10 @@ footer {
     letter-spacing: 0.5px;
 }
 
-code, pre {
+code,
+pre {
     font-family: 'JetBrains Mono', monospace;
-    background: linear-gradient(135deg, rgba(245,169,127,0.05), rgba(150,205,251,0.05));
+    background: linear-gradient(135deg, rgba(245, 169, 127, 0.05), rgba(150, 205, 251, 0.05));
     padding: 5px 10px;
     border-radius: 4px;
     color: var(--secondary-color);
