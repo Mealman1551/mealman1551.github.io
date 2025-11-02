@@ -7,8 +7,8 @@
     --secondary-color: #ee99a0;
     --highlight-color: #96cdfb;
     --muted-color: #6e738d;
-    --gradient-start: #a200ff;
-    --gradient-end: #01c4eb;
+    --gradient-start: #b700ff;
+    --gradient-end: #00ddff;
 }
 
 body {
@@ -20,30 +20,45 @@ body {
     transition: background 0.3s ease, color 0.3s ease;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: pulseGradient 5s ease-in-out infinite alternate;
-}
-
+/* Keyframes voor box‑elementen (zie buttons) */
 @keyframes pulseGradient {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    background-size: 200% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: pulseGradient 5s ease-in-out infinite alternate;
+    display: inline-block; /* Belangrijk! */
+}
+
 a {
     color: var(--accent-color);
     text-decoration: none;
     position: relative;
-    transition: all 0.3s ease;
+    display: inline-block; /* Belangrijk! */
     background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    background-size: 200% 200%;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: pulseGradient 4s ease-in-out infinite alternate;
+}
+
+a:hover {
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    background-repeat: no-repeat;
+    background-origin: content-box;
 }
 
 a::after {
@@ -64,9 +79,10 @@ a:hover::after {
     transform-origin: left;
 }
 
+/* Intro blok */
 .intro {
     max-width: 700px;
-    margin: 0 auto 40px auto;
+    margin: 0 auto 40px;
     padding: 20px;
     background: linear-gradient(135deg, rgba(245,169,127,0.05), rgba(150,205,251,0.05));
     border-left: 3px solid var(--accent-color);
@@ -104,6 +120,7 @@ footer {
     letter-spacing: 0.5px;
 }
 
+/* Code blokken */
 code, pre {
     font-family: 'JetBrains Mono', monospace;
     background: linear-gradient(135deg, rgba(245,169,127,0.05), rgba(150,205,251,0.05));
@@ -114,15 +131,18 @@ code, pre {
     transition: background 0.3s ease;
 }
 
+/* Buttons met gradient animatie – safe omdat geen text‑clip hier */
 button {
+    display: inline-block;
     background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    background-size: 200% 200%;
+    background-repeat: no-repeat;
     color: var(--bg-color);
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
-    background-size: 200% 200%;
     animation: pulseGradient 5s ease-in-out infinite alternate;
 }
 
