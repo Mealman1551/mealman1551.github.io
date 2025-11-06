@@ -1,72 +1,119 @@
-        :root {
-            --ctp-bg: #1e1e2e;
-            --ctp-surface: #313244;
-            --ctp-text: #a6da95;
-            --ctp-subtext: #a6adc8;
-            --ctp-accent: #c6a0f6;
-            --ctp-border: #45475a;
-            --ctp-meta: #b4befe;
-        }
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap');
 
-        body {
-            font-family: "Cascadia Code", "Fira Code", monospace;
-            background: var(--ctp-bg);
-            margin: 0;
-            padding: 0;
-            color: var(--ctp-text);
-        }
+:root {
+  --bg-color: #24273a;
+  --text-color: #8bd5ca;
+  --accent-color: #a6da95;
+  --secondary-color: #91d7e3;
+  --highlight-color: #96cdfb;
+  --muted-color: #6e738d;
+  --gradient-start: #b700ff;
+  --gradient-end: #00ddff;
+}
 
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            background: var(--ctp-surface);
-            padding: 24px;
-            border-radius: 12px;
-            box-shadow: 0 2px 16px rgba(30, 30, 46, 0.15);
-            border: 1px solid var(--ctp-border);
-        }
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'JetBrains Mono', monospace;
+  line-height: 1.6;
+  padding: 40px;
+}
 
-        h1 {
-            text-align: center;
-            color: var(--ctp-accent);
-        }
+header {
+  text-align: center;
+  margin-bottom: 50px;
+}
 
-        .blog-post {
-            margin-bottom: 40px;
-            border-bottom: 1px solid var(--ctp-border);
-            padding-bottom: 24px;
-        }
+.container {
+  max-width: 850px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--muted-color);
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(6px);
+  transition: background 0.3s ease;
+}
 
-        .blog-post:last-child {
-            border-bottom: none;
-        }
+.container:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
 
-        .blog-title {
-            font-size: 2em;
-            margin-bottom: 8px;
-            color: var(--ctp-accent);
-        }
+@keyframes pulseGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 
-        .blog-meta {
-            color: var(--ctp-meta);
-            font-size: 0.95em;
-            margin-bottom: 16px;
-        }
+h1, h2 {
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: pulseGradient 5s ease-in-out infinite alternate;
+}
 
-        .blog-content {
-            font-size: 1.1em;
-            line-height: 1.7;
-            color: var(--ctp-subtext);
-        }
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: pulseGradient 4s ease-in-out infinite alternate;
+  position: relative;
+}
 
-        code {
-            background: #181825;
-            color: var(--ctp-accent);
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-size: 0.95em;
-        }
+a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: -2px;
+  background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
 
-        b {
-            color: var(--ctp-accent);
-        }
+a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.blog-post {
+  margin-bottom: 50px;
+  border-bottom: 1px solid var(--muted-color);
+  padding-bottom: 30px;
+}
+
+.blog-title {
+  font-size: 1.8em;
+  margin-bottom: 8px;
+}
+
+.blog-meta {
+  color: var(--muted-color);
+  font-size: 0.95em;
+  margin-bottom: 16px;
+}
+
+.blog-post p {
+  color: var(--text-color);
+  font-size: 1.05em;
+}
+
+footer {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid var(--muted-color);
+  color: var(--muted-color);
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
