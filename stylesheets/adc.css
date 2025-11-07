@@ -37,3 +37,19 @@ footer {
 	background: #8f8f8f;
 	color: white;
 }
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+header {
+	text-align: center;
+}
+
+footer {
+	text-align: center;
+	margin-top: 40px;
+	padding-top: 10px;
+	border-top: 1px solid #ccc;
+}
