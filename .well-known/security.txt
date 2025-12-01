@@ -1,7 +1,5 @@
-# Meer info: https://securitytxt.org/
-
-Contact: mailto:nathandubuy4+sitesecurity@gmail
+Contact: mailto:nathandubuy4+sitesecurity@gmail.com
+Expires: 2026-11-30T23:00:00.000Z
 Encryption: https://raw.githubusercontent.com/Mealman1551/mealman1551.github.io/refs/heads/main/pubkey.asc
 Preferred-Languages: nl, en
-Expires: 1-12-2026
 Canonical: https://mealman1551.github.io/.well-known/security.txt
