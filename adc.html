@@ -268,6 +268,10 @@
       <h3>Remove ADC on Linux</h3>
       <pre><code>wget -O- "https://gitlab.com/adc-project/bash/-/raw/main/remove.sh" | bash</code></pre>
 
+      <h3>If the command <code>adc</code> does not work, try:</h3>
+      <pre><code>sudo ln -sf /opt/adc/adc /usr/local/bin/adc && hash -r && adc
+</code></pre>
+
       <p>Other releases/versions are available <a
           href="https://github.com/Mealman1551/ArchivedDataCodec/releases">here</a>.</p>
 
