@@ -1,100 +1,108 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Meals Blog</title>
-        <link rel="icon"
-            href="https://raw.githubusercontent.com/Mealman1551/mealman1551.github.io/refs/heads/main/img/favicon.ico"
-            type="image/x-icon">
-        <link rel="stylesheet" href="stylesheets/blog.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap"
-            rel="stylesheet">
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meals Blog</title>
+    <link
+      rel="icon"
+      href="https://raw.githubusercontent.com/Mealman1551/mealman1551.github.io/refs/heads/main/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="stylesheets/blog.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-    <body>
-        <header>
-            <h1>Meal's Blog</h1>
-            <p><a href="index.html">← back to home</a></p>
-            <br>
-            <p>If the site only loads gradient blocks,
-                please press: ctrl(cmd) + shift
-                + R (you might need to do this mutiple times)</p>
-            <br>
-        </header>
+  <body>
+    <header>
+      <h1>Meal's Blog</h1>
+      <p><a href="index.html">← back to home</a></p>
+      <br />
+      <p>
+        If the site only loads gradient blocks, please press: ctrl(cmd) + shift
+        + R (you might need to do this mutiple times)
+      </p>
+      <br />
+    </header>
 
-        <main class="container">
+    <main class="container">
+      <article class="blog-post">
+        <h2 class="blog-title">
+          Today i installed the all new Linux kernel v6.18 on Debian Sid
+        </h2>
+        <div class="blog-meta">
+          By <b>Mealman1551</b> on <b>1-12-2025</b> at <b>21:17</b>
+        </div>
+        <p>
+          Today i installed the all new Linux kernel v6.18 on Debian Sid using
+          the experimental repository. The installation was not so hard as i
+          expected, it was just fun and hands-on. How it worked was by adding
+          the experimental repository to my sources.list file, then updating the
+          package lists and installing the linux-image-6.18-amd64 package with:
+          <code
+            >sudo apt install -t experimental linux-image-amd64
+            linux-headers-amd64</code
+          >
+          After the installation i rebooted my system and checked if the new
+          kernel was running with: <code>uname -r</code>
+          And it worked! I am now running Linux kernel v6.18 on my Debian Sid
+          system without Linux 6.18 being in the Sid repository yet.
+        </p>
+      </article>
 
-            <article class="blog-post">
-                <h2 class="blog-title">Today i installed the all new Linux kernel v6.18 on Debian Sid</h2>
-                <div class="blog-meta">By <b>Mealman1551</b> on <b>1-12-2025</b>
-                    at <b>21:17</b></div>
-                <p>
-                    Today i installed the all new Linux kernel v6.18 on Debian Sid using the experimental repository.
-                    The installation was not so hard as i expected, it was just fun and hands-on.
-                    How it worked was by adding the experimental repository to my sources.list file,
-                    then updating the package lists and installing the linux-image-6.18-amd64 package with: <code>sudo apt install -t experimental linux-image-amd64 linux-headers-amd64</code>
-                    After the installation i rebooted my system and checked if the new kernel was running with: <code>uname -r</code>
-                    And it worked! I am now running Linux kernel v6.18 on my Debian Sid system without Linux 6.18 being in the Sid repository yet.
-                </p>
-            </article>
+      <article class="blog-post">
+        <h2 class="blog-title">My new favorite desktop environment</h2>
+        <div class="blog-meta">
+          By <b>Mealman1551</b> on <b>October 21 2025</b> at <b>22:34</b>
+        </div>
+        <p>
+          MATE is my new favorite desktop environment. It's a fork of GNOME2 and
+          remains in active development. MATE feels lightweight and has that
+          wonderful old-school vibe. I even used Dconf Editor to set the Debian
+          logo as my menu button. The fact that MATE is still actively
+          maintained strikes the perfect balance between nostalgia and
+          functionality for me.
+        </p>
+      </article>
 
-        
-            <article class="blog-post">
-                <h2 class="blog-title">My new favorite desktop environment</h2>
-                <div class="blog-meta">By <b>Mealman1551</b> on <b>October 21
-                        2025</b> at <b>22:34</b></div>
-                <p>
-                    MATE is my new favorite desktop environment. It's a fork of
-                    GNOME2 and remains in active development.
-                    MATE feels lightweight and has that wonderful old-school
-                    vibe.
-                    I even used Dconf Editor to set the Debian logo as my menu
-                    button.
-                    The fact that MATE is still actively maintained strikes the
-                    perfect balance between nostalgia and functionality for me.
-                </p>
-            </article>
+      <article class="blog-post">
+        <h2 class="blog-title">My GNOME Flashback experience</h2>
+        <div class="blog-meta">
+          By <b>Mealman1551</b> on <b>June 15 2025</b>
+        </div>
+        <p>
+          I tried GNOME Flashback on my Debian system with a nostalgic Etch
+          wallpaper. The experience was surprisingly smooth, reminiscent of the
+          classic GNOME 2 interface. The lightweight design ensured fluid
+          performance, even on older hardware. The simplicity and customizable
+          panel make it a wonderfully minimalist desktop environment.
+        </p>
+      </article>
 
-            <article class="blog-post">
-                <h2 class="blog-title">My GNOME Flashback experience</h2>
-                <div class="blog-meta">By <b>Mealman1551</b> on <b>June 15
-                        2025</b></div>
-                <p>
-                    I tried GNOME Flashback on my Debian system with a nostalgic
-                    Etch wallpaper.
-                    The experience was surprisingly smooth, reminiscent of the
-                    classic GNOME 2 interface.
-                    The lightweight design ensured fluid performance, even on
-                    older hardware.
-                    The simplicity and customizable panel make it a wonderfully
-                    minimalist desktop environment.
-                </p>
-            </article>
+      <article class="blog-post">
+        <h2 class="blog-title">
+          Why Debian and Debian-based distros are better for servers
+        </h2>
+        <div class="blog-meta">By <b>Mealman1551</b> on <b>May 27 2025</b></div>
+        <p>
+          Debian and its derivatives, such as Ubuntu, are often considered the
+          best choice for servers. Thanks to their stability, security, and
+          extensive package management, they are ideal for production
+          environments. The long release cycles ensure that software is
+          thoroughly tested, making Debian an extremely reliable choice. Most
+          repositories contain stable versions of software, which minimizes bugs
+          and compatibility issues.
+        </p>
+      </article>
+    </main>
 
-            <article class="blog-post">
-                <h2 class="blog-title">Why Debian and Debian-based distros are
-                    better for servers</h2>
-                <div class="blog-meta">By <b>Mealman1551</b> on <b>May 27
-                        2025</b></div>
-                <p>
-                    Debian and its derivatives, such as Ubuntu, are often
-                    considered the best choice for servers.
-                    Thanks to their stability, security, and extensive package
-                    management, they are ideal for production environments.
-                    The long release cycles ensure that software is thoroughly
-                    tested, making Debian an extremely reliable choice.
-                    Most repositories contain stable versions of software, which
-                    minimizes bugs and compatibility issues.
-                </p>
-            </article>
-        </main>
-
-        <footer>
-            <h6>&copy; 2025 Mealman1551</h6>
-        </footer>
-    </body>
+    <footer>
+      <h6>&copy; 2026 Mealman1551</h6>
+    </footer>
+  </body>
 </html>
