@@ -1,193 +1,247 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap');
-
+/* ============================================================
+   Catppuccin Macchiato Palette & Glass Specs
+   ============================================================ */
 :root {
-    --bg-color: #24273a;
-    --text-color: #8bd5ca;
-    --accent-color: #a6da95;
-    --secondary-color: #91d7e3;
-    --highlight-color: #96cdfb;
-    --muted-color: #6e738d;
-    --gradient-start: #b700ff;
-    --gradient-end: #00ddff;
+  --base: #24273a;
+  --mantle: #1e2030;
+  --crust: #181926;
+  --text: #cad3f5;
+  --subtext0: #a5adcb;
+  --surface0: #363a4f;
+  --blue: #8aadf4;
+  --lavender: #b7bdf8;
+  --sapphire: #7dc4e4;
+  --green: #a6da95;
+  --mauve: #c6a0f6;
+  
+  /* ULTIEME LIQUID GLASS - Geoptimaliseerd voor prestaties */
+  /* Een iets donkerdere basis om het contrast met de glans te verhogen */
+  --glass-bg: rgba(20, 22, 33, 0.45); 
+  
+  /* Complexere glans-reflectie voor diepte */
+  --glass-reflect: 
+    linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 40%),
+    linear-gradient(170deg, rgba(138, 173, 244, 0.05) 0%, rgba(138, 173, 244, 0) 30%);
+
+  /* Iets duidelijker border voor een scherpere 'glass edge' */
+  --glass-border: rgba(255, 255, 255, 0.12);
+  
+  /* Diepere, complexere schaduw voor meer 'float' */
+  --glass-shadow: 
+    0 10px 30px -10px rgba(0, 0, 0, 0.7),
+    0 20px 60px -15px rgba(0, 0, 0, 0.5);
+
+  /* Extreem zware blur voor Apple look, maar beperkt tot één paneel */
+  --blur: blur(35px) saturate(220%); 
+}
+
+/* ============================================================
+   Keyframes (Alleen transform/opacity voor GPU versnelling)
+   ============================================================ */
+@keyframes liquidSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.99);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ============================================================
+   Basis Styling
+   ============================================================ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background: var(--bg-color);
-    color: var(--text-color);
-    font-family: 'JetBrains Mono', monospace;
-    line-height: 1.6;
-    padding: 40px;
-    transition: background 0.3s ease, color 0.3s ease;
-}
-
-@keyframes pulseGradient {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 700;
-    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
-    background-size: 200% 200%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    display: inline-block;
-    will-change: background-position;
-    transform: translateZ(0);
-    -webkit-font-smoothing: antialiased;
-    animation: pulseGradient 5s ease-in-out infinite alternate;
-}
-
-a {
-    color: var(--accent-color);
-    text-decoration: none;
-    position: relative;
-    display: inline-block;
-    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
-    background-size: 200% 200%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    will-change: background-position;
-    transform: translateZ(0);
-    -webkit-font-smoothing: antialiased;
-    animation: pulseGradient 4s ease-in-out infinite alternate;
-}
-
-a::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    left: 0;
-    bottom: -2px;
-    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease;
-}
-
-a:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
-.intro {
-    max-width: 700px;
-    margin: 0 auto 40px;
-    padding: 20px;
-    background: linear-gradient(135deg, rgba(245, 169, 127, 0.05), rgba(150, 205, 251, 0.05));
-    border-left: 3px solid var(--accent-color);
-    border-radius: 8px;
-    transition: background 0.3s ease;
-}
-
-.intro p,
-.intro ul {
-    margin-bottom: 15px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
-}
-
-img:hover {
-    transform: scale(1.05);
-}
-
-header {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-footer {
-    text-align: center;
-    margin-top: 60px;
-    padding-top: 20px;
-    border-top: 1px solid var(--muted-color);
-    color: var(--muted-color);
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
-}
-
-code,
-pre {
-    font-family: 'JetBrains Mono', monospace;
-    background: linear-gradient(135deg, rgba(245, 169, 127, 0.05), rgba(150, 205, 251, 0.05));
-    padding: 5px 10px;
-    border-radius: 4px;
-    color: var(--secondary-color);
-    overflow-x: auto;
-    transition: background 0.3s ease;
-}
-
-button {
-    display: inline-block;
-    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
-    background-size: 200% 200%;
-    color: var(--bg-color);
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    animation: pulseGradient 5s ease-in-out infinite alternate;
-}
-
-button:hover {
-    background-position: 100% 50%;
-    color: #fff;
-}
-
-.stack {
+  background-color: var(--base);
+  /* Complexere, diepere gradient achtergrond */
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(198, 160, 246, 0.2) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(138, 173, 244, 0.18) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(36, 39, 58, 0.5) 0%, transparent 100%),
+    linear-gradient(160deg, var(--base) 0%, var(--mantle) 100%);
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: 'Fira Code', monospace;
   display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  min-height: 100vh;
 }
 
-.lang {
+/* ============================================================
+   Het Centrale Liquid Glass Paneel (Geoptimaliseerd)
+   ============================================================ */
+.main-glass {
+  max-width: 900px;
+  width: 100%;
+  
+  /* HET MAGISCHE GLAS EFFECT */
+  background: var(--glass-bg);
+  background-image: var(--glass-reflect);
+  
+  /* Slechts één zware blur berekening voor de hele site */
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+  
+  /* Fallback voor browsers die geen blur ondersteunen */
+  -webkit-backdrop-filter: blur(0px);
+
+  border: 1px solid var(--glass-border);
+  border-radius: 30px; /* Nog ronder voor Apple gevoel */
+  padding: 60px; /* Meer witruimte voor een premium look */
+  
+  box-shadow: var(--glass-shadow);
+  
+  /* Snelle en vloeiende laadanimatie */
+  animation: liquidSlideIn 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+  
+  /* Zorgt ervoor dat alle inhoud binnen het glas blijft */
+  overflow: hidden; 
+}
+
+/* ============================================================
+   Inhoud Styling
+   ============================================================ */
+/* Verwijder de oude container styling van deze elementen */
+header, .intro, footer {
+  background: none;
+  backdrop-filter: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin-bottom: 0;
+  box-shadow: none;
+  animation: none; /* Verwijder cascade animatie voor snelheid */
+}
+
+/* Marges tussen secties binnen het glas */
+header { margin-bottom: 40px; text-align: center; }
+.intro { margin-bottom: 40px; }
+footer { margin-top: 50px; text-align: center; }
+
+header h1 {
+  color: var(--mauve);
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-bottom: -15px;
+}
+
+header h2 { color: var(--blue); }
+header h4 { color: var(--subtext0); opacity: 0.8; }
+
+/* Links met vloeiende underline animatie */
+a {
+  color: var(--sapphire);
+  text-decoration: none;
   position: relative;
-  display: inline-block;
-}
-
-.lang span {
-  position: absolute;
-  bottom: -25px;
-  left: 50%;
-  transform: translateX(-50%) translateY(10px);
-  opacity: 0;
-  background: rgba(0,0,0,0.75);
-  color: #fff;
-  font-size: 12px;
-  padding: 3px 6px;
-  border-radius: 5px;
-  white-space: nowrap;
-  pointer-events: none;
   transition: all 0.3s ease;
 }
 
-.lang:hover span {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
+a:hover {
+  color: var(--blue);
+  text-shadow: 0 0 10px rgba(138, 173, 244, 0.5);
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--blue);
+  transform-origin: bottom right;
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Horizontale lijn - zachter en dunner */
+hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin: 30px 0;
+}
+
+/* Lijsten met custom bullets */
+ul { list-style-type: none; padding-left: 5px; }
+li { margin-bottom: 15px; position: relative; padding-left: 30px; }
+li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--mauve);
+  opacity: 0.7;
+}
+
+strong { color: var(--lavender); font-weight: 600; }
+
+/* Stack / Languages - Snelle Hover */
+.stack { display: flex; flex-wrap: wrap; gap: 15px; margin: 25px 0; justify-content: center;}
+.lang {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 12px 20px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--glass-border);
+  transition: all 0.3s ease;
+}
+
+.lang:hover {
+  transform: translateY(-5px) scale(1.02);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* 88x31 Buttons - Snelle Pop */
+.button-gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; padding: 20px; }
+.button-gallery img {
+  image-rendering: pixelated;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.button-gallery img:hover { transform: scale(1.15) translateY(-3px); box-shadow: 0 4px 10px rgba(0,0,0,0.4); }
+
+/* Socials - Snelle Pop */
+.socials { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 25px; }
+.socials img {
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));
+  transition: all 0.3s ease;
+}
+.socials img:hover { transform: scale(1.25) translateY(-4px); filter: brightness(1.25); }
+
+/* Webring styling */
+.webring {
+  background: rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 50px;
+  margin-top: 20px;
+  border: 1px solid var(--glass-border);
+}
+.webring-btn { font-weight: bold; color: var(--green) !important; }
+.webring-divider { color: var(--subtext0); margin: 0 10px; opacity: 0.4; }
+
+/* ============================================================
+   Mobile Responsive (Geoptimaliseerd)
+   ============================================================ */
+@media (max-width: 700px) {
+  body { padding: 20px 10px; }
+  header h1 { font-size: 2.5rem; letter-spacing: -1px; }
+  .main-glass { padding: 30px 20px; border-radius: 20px; }
+  .lang { padding: 10px 15px; font-size: 0.9rem; }
 }

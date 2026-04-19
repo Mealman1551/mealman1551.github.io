@@ -1,0 +1,201 @@
+/* Catppuccin Macchiato Palette */
+:root {
+  --base: #24273a;
+  --mantle: #1e2030;
+  --crust: #181926;
+  --text: #cad3f5;
+  --subtext0: #a5adcb;
+  --surface0: #363a4f;
+  --blue: #8aadf4;
+  --lavender: #b7bdf8;
+  --sapphire: #7dc4e4;
+  --green: #a6da95;
+  --mauve: #c6a0f6;
+  --glass: rgba(36, 39, 58, 0.7); /* Transparante base */
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--base);
+  /* Subtiele gradient achtergrond voor diepte achter het glas */
+  background: radial-gradient(circle at top left, #363a4f, #24273a 60%);
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: 'Fira Code', monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+/* De glas-container die over alles heen valt */
+body > * {
+  max-width: 850px;
+  width: 100%;
+  background: var(--glass);
+  backdrop-filter: blur(15px) saturate(150%);
+  -webkit-backdrop-filter: blur(15px) saturate(150%);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* Header styling */
+header {
+  text-align: center;
+}
+
+header h1 {
+  color: var(--mauve);
+  font-size: 2.5rem;
+}
+
+header h2 {
+  color: var(--blue);
+}
+
+header h4 {
+  color: var(--subtext0);
+}
+
+/* Links */
+a {
+  color: var(--sapphire);
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+  color: var(--blue);
+  text-shadow: 0 0 8px var(--blue);
+}
+
+/* Horizontale lijn */
+hr {
+  border: none;
+  border-top: 1px solid var(--glass-border);
+  margin: 20px 0;
+}
+
+/* Lijsten en tekst */
+ul {
+  list-style-type: "→ ";
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+strong {
+  color: var(--lavender);
+}
+
+/* Stack / Languages sectie */
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.lang {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px 12px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--glass-border);
+  transition: transform 0.2s ease;
+}
+
+.lang:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* 88x31 Buttons Gallery */
+.button-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.button-gallery img {
+  image-rendering: pixelated;
+  transition: transform 0.2s ease;
+}
+
+.button-gallery img:hover {
+  transform: scale(1.1);
+}
+
+/* Footer & Socials */
+footer {
+  text-align: center;
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.socials img {
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.socials img:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+/* Webring styling */
+.webring {
+  background: var(--mantle);
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 30px;
+  margin-top: 10px;
+  border: 1px solid var(--glass-border);
+}
+
+.webring-btn {
+  font-weight: bold;
+  color: var(--green) !important;
+}
+
+.webring-divider {
+  color: var(--subtext0);
+  margin: 0 5px;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 15px;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+  }
+  
+  body > * {
+    padding: 20px;
+  }
+}
