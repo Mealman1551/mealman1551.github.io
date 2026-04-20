@@ -1,0 +1,154 @@
+/* ============================================================
+   Catppuccin Macchiato & Liquid Glass Setup
+   ============================================================ */
+:root {
+  --base: #24273a;
+  --text: #cad3f5;
+  --subtext: #a5adcb;
+  --mauve: #c6a0f6;
+  --blue: #8aadf4;
+  --sapphire: #7dc4e4;
+  --lavender: #b7bdf8;
+  --glass-bg: rgba(30, 32, 48, 0.45);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --blur: blur(40px) saturate(200%);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: var(--base);
+  color: var(--text);
+  font-family: 'Fira Code', monospace;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 60px 20px;
+  position: relative;
+}
+
+/* ============================================================
+   De Vloeibare Achtergrond (Blobs)
+   ============================================================ */
+.glass-blob {
+  position: fixed;
+  width: 550px; height: 550px;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: -1;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.blob-1 { background: var(--mauve); top: -15%; left: -10%; animation: float 20s infinite alternate; }
+.blob-2 { background: var(--blue); bottom: -15%; right: -10%; animation: float 25s infinite alternate-reverse; }
+.blob-3 { background: var(--sapphire); top: 35%; left: 30%; width: 350px; height: 350px; animation: float 18s infinite linear; }
+
+@keyframes float {
+  from { transform: translate(0, 0) rotate(0deg) scale(1); }
+  to { transform: translate(100px, 100px) rotate(360deg) scale(1.15); }
+}
+
+/* ============================================================
+   HET MAIN GLASS PANEEL
+   ============================================================ */
+.main-glass {
+  max-width: 900px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  padding: 60px;
+  border-radius: 35px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+  animation: slideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+/* De Noise Layer */
+.main-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.04;
+  filter: url(#glassNoise);
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
+/* Specular Highlight (De glimmende bovenrand) */
+.main-glass::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 35px;
+  padding: 1.5px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 60%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================================
+   Content Styling
+   ============================================================ */
+header { text-align: center; margin-bottom: 30px; }
+h1 { font-size: 3.5rem; color: var(--mauve); letter-spacing: -2px; }
+h2 { color: var(--blue); }
+h4 { color: var(--subtext); opacity: 0.8; }
+
+hr { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 30px 0; }
+
+a { color: var(--sapphire); text-decoration: none; transition: 0.3s; }
+a:hover { color: var(--blue); text-shadow: 0 0 10px var(--blue); }
+
+ul { list-style: none; }
+li { margin-bottom: 12px; position: relative; padding-left: 25px; }
+li::before { content: '→'; position: absolute; left: 0; color: var(--mauve); opacity: 0.7; }
+
+.stack { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0; justify-content: center; }
+.lang {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 10px 18px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--glass-border);
+  transition: 0.3s;
+}
+.lang:hover { transform: translateY(-3px); background: rgba(255, 255, 255, 0.1); }
+
+.button-gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.button-gallery img { border-radius: 5px; transition: 0.3s; }
+.button-gallery img:hover { transform: scale(1.15); }
+
+.socials { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
+.socials img { transition: 0.3s; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); }
+.socials img:hover { transform: scale(1.2) translateY(-3px); }
+
+.webring {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 12px 25px;
+  border-radius: 50px;
+  display: inline-block;
+  border: 1px solid var(--glass-border);
+}
+
+footer { text-align: center; }
+
+@media (max-width: 700px) {
+  .main-glass { padding: 30px 20px; }
+  h1 { font-size: 2.2rem; }
+}

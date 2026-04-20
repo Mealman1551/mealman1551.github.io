@@ -1,0 +1,245 @@
+/* ============================================================
+   Catppuccin Macchiato - Cyber Terminal (Centered & Rounded)
+   ============================================================ */
+:root {
+  --base: #24273a;
+  --mantle: #1e2030;
+  --crust: #181926;
+  --text: #cad3f5;
+  --subtext0: #a5adcb;
+  --blue: #8aadf4;
+  --mauve: #c6a0f6;
+  --green: #a6da95;
+  --red: #ed8796;
+  --sapphire: #7dc4e4;
+
+  /* GLASS & BORDERS */
+  --glass-bg: rgba(30, 32, 48, 0.7);
+  --glass-border: rgba(198, 160, 246, 0.3);
+  --radius-lg: 24px;
+  --radius-sm: 12px;
+}
+
+/* ============================================================
+   Basis Layout (Centered)
+   ============================================================ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--crust);
+  /* Cyber Grid Achtergrond */
+  background-image: 
+    linear-gradient(var(--base) 1px, transparent 1px),
+    linear-gradient(90deg, var(--base) 1px, transparent 1px);
+  background-size: 50px 50px;
+  
+  color: var(--text);
+  font-family: 'Fira Code', monospace;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 60px 20px;
+  text-align: center; /* Alles standaard centreren */
+}
+
+/* Scanline effect voor die terminal vibe */
+body::before {
+  content: " ";
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%);
+  background-size: 100% 4px;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+/* ============================================================
+   Main Glass Panel
+   ============================================================ */
+.main-glass {
+  max-width: 900px;
+  width: 100%;
+  background: var(--glass-bg);
+  backdrop-filter: blur(25px) saturate(160%);
+  -webkit-backdrop-filter: blur(25px) saturate(160%);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 60px 40px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5), inset 0 0 20px rgba(198, 160, 246, 0.05);
+  animation: slideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(30px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ============================================================
+   Elementen Styling
+   ============================================================ */
+header h1 {
+  color: var(--mauve);
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  letter-spacing: -2px;
+  text-shadow: 0 0 20px rgba(198, 160, 246, 0.4);
+}
+
+header h2 { color: var(--blue); margin-top: 10px; }
+header h4 { color: var(--subtext0); font-weight: normal; }
+
+hr {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin: 40px auto;
+  width: 80%;
+}
+
+p {
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto; /* Center text block */
+}
+
+/* Lijstjes centreren */
+ul {
+  list-style: none;
+  display: inline-block;
+  text-align: left; /* Tekst in de lijst links, maar lijst zelf gecentreerd */
+  margin: 20px auto;
+}
+
+li {
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 25px;
+}
+
+li::before {
+  content: '>';
+  position: absolute;
+  left: 0;
+  color: var(--green);
+  font-weight: bold;
+}
+
+/* ============================================================
+   Knoppen & "Zwellende" Afbeeldingen
+   ============================================================ */
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+/* De 'Langs' / Knoppen */
+.lang {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  padding: 12px 20px;
+  border-radius: var(--radius-sm); /* Ronde edges */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.lang:hover {
+  transform: scale(1.1); /* Zwellen */
+  background: rgba(198, 160, 246, 0.15);
+  border-color: var(--mauve);
+  box-shadow: 0 0 20px rgba(198, 160, 246, 0.3);
+}
+
+/* 88x31 Buttons Gallery */
+.button-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px 0;
+}
+
+.button-gallery img {
+  border-radius: 6px; /* Iets ronder voor de retro buttons */
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.button-gallery img:hover {
+  transform: scale(1.4) rotate(2deg); /* Extra zwellen + kleine draai */
+  z-index: 10;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* Socials icons */
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.socials img {
+  transition: all 0.3s ease;
+}
+
+.socials a:hover img {
+  transform: scale(1.5) translateY(-5px); /* Zwellen en omhoog */
+  filter: drop-shadow(0 0 10px var(--blue));
+}
+
+/* ============================================================
+   Webring & Links
+   ============================================================ */
+a {
+  color: var(--green);
+  text-decoration: none;
+  transition: 0.2s;
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--mauve);
+  text-shadow: 0 0 8px var(--mauve);
+}
+
+.webring {
+  background: rgba(0,0,0,0.3);
+  padding: 15px 25px;
+  border-radius: 50px; /* Volledig ronde edges voor de webring bar */
+  border: 1px solid var(--glass-border);
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* ============================================================
+   Blobs (Achtergrond decoratie)
+   ============================================================ */
+.glass-blob {
+  position: fixed;
+  width: 40vw;
+  height: 40vw;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: -1;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.blob-1 { background: var(--mauve); top: -10%; left: -10%; }
+.blob-2 { background: var(--blue); bottom: -10%; right: -10%; }
+
+/* Mobile */
+@media (max-width: 600px) {
+  .main-glass { padding: 30px 15px; border-radius: 0; border: none; background: var(--base); }
+  .lang { width: 100%; justify-content: center; }
+}
