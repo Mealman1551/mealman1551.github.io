@@ -399,10 +399,10 @@
       </p>
 
       <h3>Linux installation command</h3>
-      <pre><code>mkdir -p ~/adc-temp && cd ~/adc-temp && wget -O adc.tar.xz "https://github.com/Mealman1551/ArchivedDataCodec/releases/download/v1.4.5/adc.tar.xz" && tar -xJf adc.tar.xz && sudo ./install.sh && cd ~ && rm -rf ~/adc-temp</code></pre>
+      <pre><code>wget -O- "https://raw.githubusercontent.com/The-ADC-Archiver-Project/webscripts/refs/heads/main/install.sh" | bash</code></pre>
 
       <h3>Remove ADC on Linux</h3>
-      <pre><code>wget -O- "https://gitlab.com/adc-project/bash/-/raw/main/remove.sh" | bash</code></pre>
+      <pre><code>wget -O- https://raw.githubusercontent.com/The-ADC-Archiver-Project/webscripts/refs/heads/main/uninstall.sh | bash</code></pre>
 
       <h3>If the command <code>adc</code> does not work, try:</h3>
       <pre><code>sudo ln -sf /opt/adc/adc /usr/local/bin/adc && hash -r && adc
