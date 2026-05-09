@@ -607,3 +607,12 @@ blockquote footer {
   background-color: var(--color-scrollbar);
   border-radius: 10px;
 }
+
+
+.banner {
+  width: 100%;
+  aspect-ratio: 6 / 1;
+  background-image: url("https://raw.githubusercontent.com/The-ADC-Archiver-Project/Assets/refs/heads/main/banner/bannermay26.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
