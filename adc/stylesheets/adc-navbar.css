@@ -1,0 +1,111 @@
+.adc-navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.4rem 1.5rem;
+  background: linear-gradient(135deg, #071b2b 0%, #102e4f 100%);
+  color: #f5f8ff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 32px -20px rgba(0, 0, 0, 0.4);
+}
+
+.adc-navbar .nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.adc-navbar .nav-logo {
+  color: #f5f8ff;
+  text-decoration: none;
+  font-size: 1.05rem;
+}
+
+.adc-navbar .nav-logo strong {
+  display: block;
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+}
+
+.adc-navbar .nav-logo span {
+  display: block;
+  font-size: 0.82rem;
+  opacity: 0.75;
+  margin-top: 0.2rem;
+}
+
+.adc-navbar .nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.adc-navbar .nav-links li {
+  margin: 0;
+}
+
+.adc-navbar .nav-links a {
+  color: #d7e2ff;
+  text-decoration: none;
+  padding: 0.55rem 0.8rem;
+  border-radius: 999px;
+  transition: background 180ms ease, color 180ms ease;
+  font-size: 0.95rem;
+}
+
+.adc-navbar .nav-links a:hover,
+.adc-navbar .nav-links a:focus-visible {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.adc-navbar .nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+.adc-navbar .nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: #ff8d00;
+  color: #0d1223;
+  border-radius: 999px;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 140ms ease, box-shadow 140ms ease;
+}
+
+.adc-navbar .nav-cta:hover,
+.adc-navbar .nav-cta:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(255, 141, 0, 0.24);
+}
+
+@media (max-width: 900px) {
+  .adc-navbar {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .adc-navbar .nav-actions {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .adc-navbar {
+    gap: 0.8rem;
+  }
+
+  .adc-navbar .nav-links {
+    justify-content: center;
+  }
+}
