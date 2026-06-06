@@ -2,37 +2,53 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="2732.5627"
-   height="932.21198"
-   viewBox="0 0 722.99054 246.64793"
+   width="2898.667"
+   height="631.96149"
+   viewBox="0 0 766.93896 167.20648"
    version="1.1"
    id="svg1"
-   xml:space="preserve"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"><defs
-     id="defs1"><rect
-       x="716.56342"
-       y="872.58929"
-       width="2092.4395"
-       height="693.00024"
-       id="rect2" /></defs><g
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient1">
+      <stop
+         style="stop-color:#b40e00;stop-opacity:1;"
+         offset="0"
+         id="stop1" />
+      <stop
+         style="stop-color:#600088;stop-opacity:1;"
+         offset="0.5"
+         id="stop3" />
+      <stop
+         style="stop-color:#3d9300;stop-opacity:1;"
+         offset="1"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#linearGradient1"
+       id="linearGradient2"
+       x1="79.952736"
+       y1="403.18314"
+       x2="726.90369"
+       y2="412.8945"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.87086135,0,0,0.87086135,55.28246,50.791408)" />
+  </defs>
+  <g
      id="layer1"
-     transform="translate(-35.379704,-273.55107)"><g
-       id="g13"><text
-         xml:space="preserve"
-         transform="matrix(0.81842972,0,0,0.81842972,-1061.0196,-508.33177)"
-         id="text1"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:400px;font-family:'Matura MT Script Capitals';-inkscape-font-specification:'Matura MT Script Capitals';text-align:center;white-space:pre;shape-inside:url(#rect2);display:inline;fill:#000000;stroke:#000000;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"><tspan
-           x="1329.4814"
-           y="1248.7045"
-           id="tspan8"><tspan
-             style="font-style:oblique;font-weight:bold;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold Oblique';fill:#b40e00"
-             id="tspan2">A</tspan><tspan
-             style="font-style:oblique;font-weight:bold;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold Oblique';fill:#600088"
-             id="tspan3">D</tspan><tspan
-             style="font-style:oblique;font-weight:bold;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold Oblique';fill:#3d9300"
-             id="tspan4">C</tspan></tspan></text></g></g><style
-     type="text/css"
-     id="style1">
-	.st0{fill:#FFFFFF;}
-</style></svg>
+     transform="translate(-13.405521,-313.27176)">
+    <text
+       xml:space="preserve"
+       style="font-size:230.312px;font-family:'Swis721 BdRnd BT';-inkscape-font-specification:'Swis721 BdRnd BT';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:url(#linearGradient2);fill-opacity:1;fill-rule:evenodd;stroke:#00e870;stroke-width:0;stroke-linecap:round;paint-order:markers fill stroke"
+       x="400.56015"
+       y="477.71469"
+       id="text1"><tspan
+         id="tspan1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Stretch Pro';-inkscape-font-specification:'Stretch Pro';fill:url(#linearGradient2);fill-opacity:1;stroke-width:0"
+         x="400.56015"
+         y="477.71469">ADC</tspan></text>
+  </g>
+</svg>
