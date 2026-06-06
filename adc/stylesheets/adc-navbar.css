@@ -58,10 +58,38 @@
   font-size: 0.95rem;
 }
 
+.adc-navbar .nav-links a img {
+  display: none;
+}
+
+.adc-navbar .nav-links li:has(a[href*="github"]) a {
+  padding: 0;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.adc-navbar .nav-links li:has(a[href*="github"]) a img {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.adc-navbar .nav-links li:has(a[href*="github"]) span {
+  display: inline;
+}
+
 .adc-navbar .nav-links a:hover,
 .adc-navbar .nav-links a:focus-visible {
   background: rgba(255, 255, 255, 0.1);
   color: #ffffff;
+}
+
+.adc-navbar .nav-links li:has(a[href*="github"]) a:hover,
+.adc-navbar .nav-links li:has(a[href*="github"]) a:focus-visible {
+  background: none;
+  opacity: 0.8;
 }
 
 .adc-navbar .nav-actions {
