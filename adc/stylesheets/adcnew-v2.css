@@ -255,14 +255,17 @@ footer h5 {
   margin: 0 0 0.5rem;
 }
 
+.table-wrap {
+  overflow-x: auto;
+  margin-top: 1.5rem;
+  border-radius: var(--radius);
+  border: 1px solid rgba(45, 93, 243, 0.12);
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 1.5rem;
   background: var(--color-surface);
-  border: 1px solid rgba(45, 93, 243, 0.12);
-  border-radius: var(--radius);
-  overflow: hidden;
 }
 
 thead {
@@ -281,15 +284,11 @@ th {
   color: var(--color-text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.06em;
+  white-space: nowrap;
 }
 
 tbody tr:last-child td {
   border-bottom: none;
-}
-
-.table-wrap {
-  overflow-x: auto;
-  margin-top: 1rem;
 }
 
 .news-entry {
