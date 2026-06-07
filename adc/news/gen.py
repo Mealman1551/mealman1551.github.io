@@ -48,7 +48,7 @@ items.sort(key=lambda x: x["_dt"], reverse=True)
 # ---------------------------------------------------------------------------
 def human_date(dt: datetime) -> str:
     """June 7, 2026"""
-    return dt.strftime("%B %-d, %Y")
+    return f"{dt.strftime('%B')} {dt.day}, {dt.year}"
 
 def rfc822(dt: datetime) -> str:
     """Sat, 07 Jun 2026 00:00:00 +0000"""
