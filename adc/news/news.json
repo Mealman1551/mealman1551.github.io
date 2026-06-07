@@ -1,5 +1,12 @@
 [
   {
+    "id": "adc new rss",
+    "title": "ADC news RSS feed launched",
+    "date": "2026-06-07",
+    "author": "Mealman1551",
+    "content": "ADC has a new RSS feed for simple news updates."
+  },
+  {
     "id": "rc-1.5.0",
     "title": "ADC 1.5.0 Release Candidate binaries available",
     "date": "2026-06-07",
