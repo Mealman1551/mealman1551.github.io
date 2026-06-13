@@ -1,52 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>ADC News</title>
-    <link>https://mealman1551.github.io/adc/news/</link>
-    <description>Latest news from The ADC Archiver Project</description>
-    <language>en</language>
-    <lastBuildDate>Sun, 07 Jun 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mealman1551.github.io/adc/news/rss.xml" rel="self" type="application/rss+xml" />
+<channel>
+<title>ADC News</title>
+<link>https://mealman1551.github.io/adc/news/</link>
+<description>Latest news from ADC</description>
+<language>en</language>
+<lastBuildDate>Sat, 13 Jun 2026 00:00:00 +0000</lastBuildDate>
+<atom:link href="https://mealman1551.github.io/adc/news/rss.xml" rel="self" type="application/rss+xml" />
+
 
     <item>
-      <title>ADC news RSS feed launched</title>
+      <title>New ADC 1.5.0 RC2 binaries released</title>
       <link>https://mealman1551.github.io/adc/news/</link>
-      <description>ADC has a new RSS feed for simple news updates.</description>
-      <pubDate>Sun, 07 Jun 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://mealman1551.github.io/adc/news/#adc new rss</guid>
+      <description>ADC 1.5.0 RC2 binaries and tarballs have been released, the new RC2 contains the most up to date Python Cryptography library</description>
+      <pubDate>Sat, 13 Jun 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://mealman1551.github.io/adc/news/#2026-06-07-adc-1.5-rc2-release</guid>
     </item>
+        
 
-    <item>
-      <title>ADC 1.5.0 Release Candidate binaries available</title>
-      <link>https://mealman1551.github.io/adc/news/</link>
-      <description>The ADC 1.5.0 Release Candidate (RC) binaries are now available for testing. Check this page for the latest RC builds and provide feedback and open issues on Codeberg.  https://codeberg.org/Mealman1551/adc_1.5.0_rc_bin/releases</description>
-      <pubDate>Sun, 07 Jun 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://mealman1551.github.io/adc/news/#rc-1.5.0</guid>
-    </item>
-
-    <item>
-      <title>Repository improvements</title>
-      <link>https://mealman1551.github.io/adc/news/</link>
-      <description>New issue templates, release asset packaging, and clearer contributor documentation have been added.</description>
-      <pubDate>Sun, 24 May 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://mealman1551.github.io/adc/news/#repo-improvements</guid>
-    </item>
-
-    <item>
-      <title>Open source contributions welcome</title>
-      <link>https://mealman1551.github.io/adc/news/</link>
-      <description>All contributions are welcome through GitHub. Submit issues, patches, or documentation improvements to help ADC grow.</description>
-      <pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://mealman1551.github.io/adc/news/#contributions-welcome</guid>
-    </item>
-
-    <item>
-      <title>ADC 1.4.5 LTS released</title>
-      <link>https://mealman1551.github.io/adc/news/</link>
-      <description>Improved stability and security updates are now available for Windows and Linux users with the latest LTS release.</description>
-      <pubDate>Sat, 04 Apr 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://mealman1551.github.io/adc/news/#lts-1.4.5</guid>
-    </item>
-
-  </channel>
+</channel>
 </rss>
