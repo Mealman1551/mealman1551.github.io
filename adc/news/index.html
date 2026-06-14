@@ -1,52 +1,50 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ADC Downloads</title>
-    <link rel="stylesheet" href="../stylesheets/adcnew-v2.css" />
-    <link rel="stylesheet" href="../stylesheets/adc-navbar.css" />
-    <link rel="stylesheet" href="../stylesheets/adc-panel.css" />
-  </head>
-  <body>
-    <nav class="adc-navbar" aria-label="ADC main navigation">
-      <div class="nav-brand">
-        <a href="../index.html" class="nav-logo">
-          <img
-            src="/img/ADC(ArchivedDataCodec).png"
-            alt="ADC Logo"
-            width="200"
-            class="nav-logo-image"
-          />
-          <span>ArchivedDataCodec</span>
-        </a>
-      </div>
-      <ul class="nav-links">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="news/index.html">News</a></li>
-        <li><a href="../downloads/index.html">Downloads</a></li>
-        <li><a href="../community/index.html">Community</a></li>
-        <li><a href="../features/index.html">Features</a></li>
-        <li>
-          <a
-            href="https://github.com/Mealman1551/ArchivedDataCodec"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="/img/socials/github.png" alt="GitHub Logo" width="24" />
-            <span>GitHub</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ADC News</title>
+  <link rel="alternate" type="application/rss+xml" title="ADC News RSS" href="rss.xml" />
+  <link rel="stylesheet" href="../stylesheets/adcnew-v2.css" />
+  <link rel="stylesheet" href="../stylesheets/adc-navbar.css" />
+  <link rel="stylesheet" href="../stylesheets/adc-panel.css" />
+</head>
+<body>
+<nav class="adc-navbar">
+  <div class="nav-brand">
+    <a href="../index.html" class="nav-logo">
+      <img src="/img/ADC(ArchivedDataCodec).png" alt="ADC Logo" width="200" />
+      <span>ArchivedDataCodec</span>
+    </a>
+  </div>
+</nav>
 
 <main>
 <section class="adc-panel">
 <h1>News</h1>
 
 
-        <article class="news-entry" id="2026-06-07-adc-1.5-rc2-release">
+        <article class="news-entry" id="2026-06-14-adc-winget">
+          <header>
+            <h2>ADC will soon be downloadable via Winget</h2>
+            <div class="news-meta">
+              <time datetime="2026-06-14">June 14, 2026</time> ·
+              <span class="news-author">by Mealman1551</span>
+            </div>
+          </header>
+          <p>
+            ADC will soon be downloadable and installable via Microsoft Winget.
+Today i opened a pull request on the Winget community repository, adding ADC 1.4.5 into the repo.
+It only waits on approval, after approved status ADC is downloadable with:
+
+```powershell
+winget install Mealman1551.ADCArchiver
+```
+          </p>
+        </article>
+        
+
+        <article class="news-entry" id="2026-06-13-adc-1.5-rc2-release">
           <header>
             <h2>New ADC 1.5.0 RC2 binaries released</h2>
             <div class="news-meta">
@@ -60,11 +58,7 @@
         </article>
         
 
-        <hr />
-<p>For the latest updates, follow the RSS feed.</p>
-<a href="https://mealman1551.github.io/adc/news/rss.xml">
-  <img src="/img/svg/icon.svg" alt="RSS Icon" width="24" />
-</a>
+<p>For the latest updates, follow the repo and RSS feed.</p>
 </section>
 </main>
 

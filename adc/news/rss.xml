@@ -5,16 +5,31 @@
 <link>https://mealman1551.github.io/adc/news/</link>
 <description>Latest news from ADC</description>
 <language>en</language>
-<lastBuildDate>Sat, 13 Jun 2026 00:00:00 +0000</lastBuildDate>
+<lastBuildDate>Sun, 14 Jun 2026 00:00:00 +0000</lastBuildDate>
 <atom:link href="https://mealman1551.github.io/adc/news/rss.xml" rel="self" type="application/rss+xml" />
 
+
+    <item>
+      <title>ADC will soon be downloadable via Winget</title>
+      <link>https://mealman1551.github.io/adc/news/</link>
+      <description>ADC will soon be downloadable and installable via Microsoft Winget.
+Today i opened a pull request on the Winget community repository, adding ADC 1.4.5 into the repo.
+It only waits on approval, after approved status ADC is downloadable with:
+
+```powershell
+winget install Mealman1551.ADCArchiver
+```</description>
+      <pubDate>Sun, 14 Jun 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://mealman1551.github.io/adc/news/#2026-06-14-adc-winget</guid>
+    </item>
+        
 
     <item>
       <title>New ADC 1.5.0 RC2 binaries released</title>
       <link>https://mealman1551.github.io/adc/news/</link>
       <description>ADC 1.5.0 RC2 binaries and tarballs have been released, the new RC2 contains the most up to date Python Cryptography library</description>
       <pubDate>Sat, 13 Jun 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://mealman1551.github.io/adc/news/#2026-06-07-adc-1.5-rc2-release</guid>
+      <guid isPermaLink="false">https://mealman1551.github.io/adc/news/#2026-06-13-adc-1.5-rc2-release</guid>
     </item>
         
 
