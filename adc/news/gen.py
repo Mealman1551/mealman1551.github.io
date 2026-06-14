@@ -110,14 +110,36 @@ INDEX = f"""<!doctype html>
   <link rel="stylesheet" href="../stylesheets/adc-panel.css" />
 </head>
 <body>
-<nav class="adc-navbar">
-  <div class="nav-brand">
-    <a href="../index.html" class="nav-logo">
-      <img src="/img/ADC(ArchivedDataCodec).png" alt="ADC Logo" width="200" />
-      <span>ArchivedDataCodec</span>
-    </a>
-  </div>
-</nav>
+    <nav class="adc-navbar" aria-label="ADC main navigation">
+      <div class="nav-brand">
+        <a href="../index.html" class="nav-logo">
+          <img
+            src="/img/ADC(ArchivedDataCodec).png"
+            alt="ADC Logo"
+            width="200"
+            class="nav-logo-image"
+          />
+          <span>ArchivedDataCodec</span>
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="index.html">News</a></li>
+        <li><a href="../downloads/index.html">Downloads</a></li>
+        <li><a href="../community/index.html">Community</a></li>
+        <li><a href="../features/index.html">Features</a></li>
+        <li>
+          <a
+            href="https://github.com/Mealman1551/ArchivedDataCodec"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="/img/socials/github.png" alt="GitHub Logo" width="24" />
+            <span>GitHub</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
 
 <main>
 <section class="adc-panel">
