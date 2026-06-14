@@ -108,6 +108,28 @@ p {
   margin: 0 auto; /* Center text block */
 }
 
+.playlist-grid {
+  display: grid;
+  gap: 32px;
+  margin-top: 40px;
+  grid-template-columns: 1fr;
+}
+
+.playlist-grid iframe {
+  width: 100%;
+  min-height: 360px;
+  border: none;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  display: block;
+}
+
+@media (min-width: 900px) {
+  .playlist-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 /* Lijstjes centreren */
 ul {
   list-style: none;
