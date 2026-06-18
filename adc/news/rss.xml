@@ -5,9 +5,20 @@
 <link>https://mealman1551.github.io/adc/news/</link>
 <description>Latest news from ADC</description>
 <language>en</language>
-<lastBuildDate>Sun, 14 Jun 2026 00:00:00 +0000</lastBuildDate>
+<lastBuildDate>Thu, 18 Jun 2026 00:00:00 +0000</lastBuildDate>
 <atom:link href="https://mealman1551.github.io/adc/news/rss.xml" rel="self" type="application/rss+xml" />
 
+
+    <item>
+      <title>ADC is available in winget</title>
+      <link>https://mealman1551.github.io/adc/news/</link>
+      <description>ADC is now officially available in Winget, wait for Winget to fetch in a few hours and then you should be able to install with:
+
+winget install Mealman1551.ADCArchiver</description>
+      <pubDate>Thu, 18 Jun 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://mealman1551.github.io/adc/news/#2026-06-18-adc-winget</guid>
+    </item>
+        
 
     <item>
       <title>ADC will soon be downloadable via Winget</title>
