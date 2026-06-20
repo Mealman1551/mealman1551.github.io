@@ -148,14 +148,13 @@ INDEX = f"""<!doctype html>
 {ARTICLES}
 
 <p>For the latest updates, follow the repo and RSS feed.</p>
-</section>
-</main>
 <hr />
 <p>For the latest updates, follow the RSS feed.</p>
 <a href="https://mealman1551.github.io/adc/news/rss.xml">
   <img src="/img/svg/icon.svg" alt="RSS Icon" width="24" />
 </a>
-
+</section>
+</main>
 <footer>
 <h5>Made with 💚 by <a href="https://github.com/Mealman1551">Mealman1551</a></h5>
 <h6>© 2024 - 2026 Mealman1551</h6>
