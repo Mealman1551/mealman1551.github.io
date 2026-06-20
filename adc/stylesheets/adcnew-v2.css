@@ -262,6 +262,21 @@ footer h5 {
   border: 1px solid rgba(45, 93, 243, 0.12);
 }
 
+pre {
+  margin: 1rem 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+pre code,
+pre samp {
+  display: block;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
