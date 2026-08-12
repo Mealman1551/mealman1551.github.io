@@ -5,9 +5,20 @@
 <link>https://mealman1551.github.io/adc/news/</link>
 <description>Latest news from ADC</description>
 <language>en</language>
-<lastBuildDate>Thu, 18 Jun 2026 00:00:00 +0000</lastBuildDate>
+<lastBuildDate>Wed, 12 Aug 2026 00:00:00 +0000</lastBuildDate>
 <atom:link href="https://mealman1551.github.io/adc/news/rss.xml" rel="self" type="application/rss+xml" />
 
+
+    <item>
+      <title>ADC Archiver 1.5.0 rc3 is available</title>
+      <link>https://mealman1551.github.io/adc/news/</link>
+      <description>ADC has a new Release Canidate, rc3. You can download the newest binaries here:
+
+https://codeberg.org/adc-archiver-project/adc_1.5.0_rc_bin/releases</description>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://mealman1551.github.io/adc/news/#2026-08-12-adc-rc3</guid>
+    </item>
+        
 
     <item>
       <title>ADC is available in winget</title>
