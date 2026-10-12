@@ -108,6 +108,11 @@ INDEX = f"""<!doctype html>
   <link rel="stylesheet" href="../stylesheets/adcnew-v2.css" />
   <link rel="stylesheet" href="../stylesheets/adc-navbar.css" />
   <link rel="stylesheet" href="../stylesheets/adc-panel.css" />
+  <link
+      rel="icon"
+      href="/adc/adcfavicon.ico"
+      type="image/x-icon"
+    />
 </head>
 <body>
     <nav class="adc-navbar" aria-label="ADC main navigation">
